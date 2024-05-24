@@ -1,10 +1,4 @@
----
-title: panCTC: tracking circulating tumor cells from scRNA-seq data of peripheral blood mononuclear cells
-author: "B. Ye", "Z. Wang"
-date: 2024-05-06
----
-
-We developed a deep learning technology called panCTC to directly identify pan-cancer CTCs in peripheral blood and reliably trace their primary tumor lesions. The panCTC method relies on a unique parameter defined as chromatin unwinding segment (CUS), derived from single-cell transcriptomics, that indicates regions of active transcription. 
+In this Github repo, we developed a deep learning technology called panCTC to directly identify pan-cancer CTCs in peripheral blood and reliably trace their primary tumor lesions. The panCTC method relies on a unique parameter defined as chromatin unwinding segment (CUS), derived from single-cell transcriptomics, that indicates regions of active transcription. 
 
 PanCTC allows for the identification of rare CTCs, and has  capability to accurately track 12 types of primary tumor lesions solely from the analysis of a simple tube of peripheral blood (PBMC) based on scRNA-seq. The 12 cancer types are: 
 
