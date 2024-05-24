@@ -65,11 +65,11 @@ python Py_panCTC_pred.py --sp_name BM_P34_primaryCancer_counts_edited
 
 # More
 
-author: "B. Ye", "Z. Wang"
+author: "B. Ye", "Z. Wang"    
 date: 2024-05-06
 
 More information could be found in our paper: 
-Bin Ye, Zhen Wang, Xu Zhang, Rui Zhang, Jingru Lian, Xuefei Liu, Yan Zhang, Zhiyuan Xu, Li Yang, Haiman Jin, Fang Chen, Zhihao Xie, Ping Zhou, Jun Tan, Shan Zeng, Changzheng Du, Yang Min, Huahui Li, Jingxian Duan, Zhicheng Li, Hui Yang, Yunpeng Cai, Hongyan Wu, Catherine C. Liu, Jing Cai, Hao Wu, Yi Lu, Jian Zhang, Xin Hong, Hairong Zheng and Hao Yu PanCTC: In Situ Identification and Tracing of Circulating Tumor Cells Using Chromatin Unwinding Segment-Based Deep Learning (http://). 
+Bin Ye, Zhen Wang, Xu Zhang, Rui Zhang, Jingru Lian, Xuefei Liu, Yan Zhang, Zhiyuan Xu, Li Yang, Haiman Jin, Fang Chen, Zhihao Xie, Ping Zhou, Jun Tan, Shan Zeng, Changzheng Du, Yang Min, Huahui Li, Jingxian Duan, Zhicheng Li, Hui Yang, Yunpeng Cai, Hongyan Wu, Catherine C. Liu, Jing Cai, Hao Wu, Yi Lu, Jian Zhang, Xin Hong, Hairong Zheng and Hao Yu. PanCTC: In Situ Identification and Tracing of Circulating Tumor Cells Using Chromatin Unwinding Segment-Based Deep Learning (http://)(Submitting). 
 
 
 
