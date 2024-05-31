@@ -60,5 +60,4 @@ def load_multi_checkpoint(filepath, device):
 
     return model
 
-eturn model
 
