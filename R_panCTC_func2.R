@@ -15,19 +15,21 @@
 fea.M2 <- function(CUS, pred_file1, smp.name){
   # All CUS are used for Model2
   # Subset predicted CTCs
+  library(Matrix)
   m1_output <- read.csv(pred_file1, header = T)
   file1_cells <- readRDS(paste0('./input/', smp.name, '.rds'))
+  file1_cells <- as.matrix(file1_cells)
   CTC_barcode <- m1_output$X[which(m1_output$Predict == 1)]
   
   if (length(CTC_barcode) > 0){
-  	CUS_CTC <- CUS[, CTC_barcode]
+  	CUS_CTC <- CUS[, CTC_barcode, drop = FALSE]
   	
   	# input csv for Model 2
     M2_input <- as.data.frame(t(CUS_CTC))
     #M2_input$celllabel <- cancer.type
     print(paste0('There are ', dim(M2_input)[1], ' CTCs predicted in the PBMC!'))
-    print(paste0('Total cells in PBMC: ', nrow(m1_output)))
-    print(paste0('CTC direction rate: ', paste0(dim(M2_input)[1], '/', dim(file1_cells)[2], '='), 
+    print(paste0('Total remaining cells in PBMC: ', nrow(m1_output)))
+    print(paste0('CTC direction rate: ', dim(M2_input)[1], '/', dim(file1_cells)[2], '=', 
           round(100*dim(M2_input)[1]/dim(file1_cells)[2], 2), '%' ))
     print('----------------')
     print('Input file for model 2 is generated!')
