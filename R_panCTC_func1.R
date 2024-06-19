@@ -31,7 +31,9 @@ func1 <- function(sp_name){
    
   example_raw_count <- readRDS(paste0('./input/', sp_name, '.rds'))
   testmtx <- as.matrix(example_raw_count)
-  cus1 <- Count2CUS(testmtx, sam.name = sp_name, filter.LOW.DR = T, filter.UP.DR = T)
+  cus1 <- Count2CUS(testmtx, sam.name = sp_name, filter.LOW.DR = TRUE, filter.UP.DR = TRUE)
 
+  
+  select_M1 <- selectfea.M1(cus1, smp.name = sp_name)
   return(cus1)
 }
