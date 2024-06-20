@@ -1,4 +1,28 @@
-In this Github repo, we developed a deep learning technology called panCTC to directly identify pan-cancer CTCs in peripheral blood and reliably trace their primary tumor lesions. The panCTC method relies on a unique parameter defined as chromatin unwinding segment (CUS), derived from single-cell transcriptomics, that indicates regions of active transcription. 
+In this Github repo, we developed a deep learning technology called panCTC to directly identify pan-cancer CTCs in peripheral blood and reliably trace their primary tumor lesions. The panCTC method relies on a unique parameter defined as chromatin unwinding segment (CUS), derived from single-cell transcriptomics, that indicates regions of active transcription. See [algorithm for calculating CUS](https://github.com/SiatBioInf/panCTC/blob/main/pics/cal_CUS.md) for details.
+
+The workflow of the panCTC algorithm is shown in Figure (a) below:
+
+![image](https://github.com/SiatBioInf/panCTC/blob/main/pics/a.png)
+
+The first step involves converting single-cell RNA (scRNA) sequencing data into chromosome unwinding segments (CUSs). These specific CUSs, which are associated with different cell types, are utilized to train and validate both Model 1 (binary class) for classifying circulating tumor cells (CTCs) and Model 2 (multiclass) for identifying the corresponding primary cancer types of CTCs. This algorithm is called the panCTC algorithm. The performance of panCTC for CTC classification and identification of primary cancer types is evaluated using pseudoperipheral blood mononuclear cells (PBMCs). Pseudo-PBMCs are created by combining scRNA-seq data from primary tumors, metastatic tumors, healthy blood immune cells, and CTCs. Then panCTC is employed to identify CTCs in the PBMC scRNA-seq data obtained from tumor patients. The identified CTCs are validated based on their biological characteristics.
+
+
+There are two progressive hypotheses, as in Figure (b), for identifying CTCs and primary cancer types: (1) CUSs are the general and intrinsic characteristics of cells and are related to cell type, and (2) the CUS characteristics of CTCs are mainly inherited from primary tumors. 
+
+![image](https://github.com/SiatBioInf/panCTC/blob/main/pics/b.png)
+
+
+The panCTC algorithm is constructed based on the CUS hypotheses.  
+
+**Step 1**: The calculation of CUS values. In the scRNA data of a single cell, genes are aligned along chromosomes, and the level of the gene sequence in each segment is subsequently compared with the base level of the whole gene. 
+
+**Step 2**: Model 1 for CTC classification. The model is based on an attention network and uses both immune-specific CUS features and tumor-specific CUS features to classify CTCs/cancer cells and immune cells. 
+
+**Step 3**: Model 2 for identifying primary cancer types of CTCs. The model is still based on an attention network and uses specific CUSs from 12 cancer types to trace the sites of primary tumors from CTCs.
+
+![image](https://github.com/SiatBioInf/panCTC/blob/main/pics/c-e.png)
+
+
 
 PanCTC allows for the identification of rare CTCs, and has  capability to accurately track 12 types of primary tumor lesions solely from the analysis of a simple tube of peripheral blood (PBMC) based on scRNA-seq. The 12 cancer types are: 
 
