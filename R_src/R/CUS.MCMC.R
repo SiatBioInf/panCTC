@@ -7,8 +7,7 @@
 CUS.MCMC <- function(fttmat, bins){
   norm.mat.sm <- fttmat
   for (m in 1:ncol(norm.mat.sm)){
-    norm.mat.sm[, m] <- floor(100*(norm.mat.sm[, m] - min(norm.mat.sm[, m]))/ (max(norm.mat.sm[, m]) - min(norm.mat.sm[, m])))
-    #norm.mat.sm[, m] <- 0.01*(norm.mat.sm[, m] - min(norm.mat.sm[, m]))/ (max(norm.mat.sm[, m]) - min(norm.mat.sm[, m]))
+    norm.mat.sm[, m] <- 0.01*(norm.mat.sm[, m] - min(norm.mat.sm[, m]))/ (max(norm.mat.sm[, m]) - min(norm.mat.sm[, m]))
   }
   n <- nrow(norm.mat.sm)
   BR <- NULL
