@@ -75,18 +75,11 @@ python Py_panCTC_pred.py --sp_name BM_P34_primaryCancer_counts_edited
 
 # Demo Video
 
-A demonstration video of panCTC usage is available. You can view it directly below or access the file in the `pics` folder:
+A demonstration video of panCTC usage is available in the `pics` folder:
 
-## Direct Video View
-
-<video width="640" height="360" controls>
-  <source src="https://github.com/SiatBioInf/panCTC/blob/main/pics/demo_video.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-## Video File Link
-
-[panCTC Demo Video](https://github.com/SiatBioInf/panCTC/blob/main/pics/demo_video.mp4)
+```
+pics/demo_video.mp4
+```
 
 This video provides a visual guide on how to run the panCTC pipeline and interpret the results.
 
