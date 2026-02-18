@@ -96,7 +96,21 @@ This video provides a visual guide on how to run the panCTC pipeline and interpr
 
 - `Model2_input_<sp_name>.csv`: The input `.csv` file for Model 2, which contains all CUS values for predicted CTCs for predicting primary tumor lesions. 
 
-- `predict_label_Model2_<sp_name>.csv`: This file shows you which cancer type the CTC is tracked. For each CTC, we provide the prior type and the top 3 predicted cancer type with probability. 
+- `predict_label_Model2_<sp_name>.csv`: This file shows you which cancer type the CTC is tracked. For each CTC, we provide the prior type and the top 3 predicted cancer type with probability.
+
+
+# Visualization Scripts
+
+The `R_script` directory contains R scripts for generating figures and visualizing results:
+
+- `R_script/`: Directory containing visualization scripts and data
+  - `R_data/`: Data files used for generating figures
+    - `OVC_CTC_prediction/`: Prediction results for ovarian cancer CTCs
+    - Comparison and performance data files (e.g., `COMPARISON_CTC_Detection_df.csv`, `PERFORMANCE_Model1_df.csv`)
+  - Figure generation scripts (e.g., `Fig.1D.R`, `Fig.1E-H.R`, `Fig.2A.R`)
+
+These scripts can be used to reproduce the figures shown in the paper and visualize the prediction results of the panCTC algorithm.
+
 
 # More
 
